@@ -1,0 +1,77 @@
+.main-body{
+    @include edContainer;
+    @include full;    
+    position: relative;
+    top: $heightContentHeader;
+    padding:1.5em $reset 2em 1em;
+    &__nav-toggle{
+        @include edItem(15);
+        @include navToggle(1.44em,black);        
+        @include crossCenter;
+        @include mainCenter;        
+        @include showTo(xxl);
+        margin: 0em 0 0 1.5em;
+        z-index: 1;
+    }
+    &__text{
+        @include edItem(5);
+        @include propertiesFont($contentFontColor,1em);
+        @include hideTo(l);
+        @include mainJustify;        
+    }
+    &__title{
+        @include edItem(70,80);
+        @include propertiesFont($contentFontColor,2em);
+        @include flexCenter;       
+        margin-top: 0;
+    }
+}
+.main-menu{
+    @include edMenu(xxl); 
+    @include propertiesFont($colorFontHeader,1em);
+    &_div{
+        @include edContainer;
+        @include mainEnd;
+        &__icon{
+            padding: 3em 0 1.5em 1em;
+        }   
+    }
+    &__row{
+        border-top:1px solid #fff;
+        padding-left:2em;     
+        &:hover{
+            background: rgba(255,255,255,0.5);
+        }
+    }
+    &__link{
+        color:#fff; 
+    }
+    &__link_1{
+        border-top:1px solid #fff;
+        color:#fff; 
+    }
+}
+.main-nav{
+    @include edNav(left,xxl,20);
+    background:$colorMenu;
+    top:$heightContentHeader;
+  
+     @include fromTo(s,m){
+        @include edNav(left,xl,20);
+    }
+    @include fromTo(m,l){
+        @include edNav(left,xl,20);
+    }
+
+    @include from(l){
+        @include edNav(left,xl,20);
+    }
+}
+.expand-submenu{
+    color:white;
+}
+#textMenu{
+    margin:$reset;
+}
+
+//prueba de menu desplegable

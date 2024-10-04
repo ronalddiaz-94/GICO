@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-mar-2017, 11:41:39
+    Author     : Pedro
+*/
+
+@mixin propertiesFont($colorFont,$sizeFont){
+
+    color: $colorFont;
+    font-family:$typeFont;   
+    font-size: $sizeFont;
+}
+@mixin propertiesLogo($logo){
+    margin-top: $logo;
+    margin-bottom: $logo;
+}
+@mixin windowsModal()
+{
+    width: 100%;
+    height: 100vh;
+    background: $modalColor;
+    z-index: 100;
+    top: 0;
+    transition: all .8 ease-out;
+    overflow: hidden;
+    position: fixed;
+    margin:  $reset;
+}
+@mixin propertiesButton()
+{
+    height: 2em;
+    border-color:#BDBDBD;
+    border-style: solid ; 
+    border-width: 1px;
+    font-family: calibri;
+    padding-left: 1em;
+}
+@mixin positionButton(){
+    @include edItem(100,50);
+    @include fromTo(s,m){
+        @include mainCenter; 
+    }
+}
+

@@ -1,0 +1,60 @@
+.main-header{ 
+    @include edContainer;
+    @include full;
+    background:$colorHeader;
+    height: $heightContentHeader;
+    top:$reset;
+    position:fixed;
+    z-index:100;
+    &__logo{
+        @include edItem(10);
+        @include mainStart;
+        position: relative;
+        padding-top: 2px;
+        padding-bottom: 0px;
+    }
+    &__sesion{
+        @include edItem(30);
+        @include mainEnd;
+        @include crossCenter;                
+        @include propertiesFont($colorFontHeader,1em);
+        text-decoration: underline; 
+    }     
+
+    
+    &__name{
+        @include edContainer;
+        @include edItem(35);
+        @include mainStart;
+        @include crossCenter;                
+        padding:0em;
+        div{
+            @include edItem(100);
+            @include propertiesFont($colorFontHeader,1em);
+            padding: 0em;
+        }
+    }           
+    &__line{           
+        @include edItem;
+        @include full;
+        position: absolute;
+        top:$heightContentHeader;           
+        border: .20em solid $colorLineHeader;
+        z-index: 4;
+    }
+    &__headertitulo{
+        @include edContainer;
+        @include edItem(25);
+        text-align: center;
+        color: #ecf0f1;
+    }
+}
+.link{ color:$colorFontHeader}
+
+#espochLogo{
+    //padding: .5em $reset;
+    height: $heightContentHeader;
+    padding: 0em 0 0.5em 1.5em;
+}
+
+

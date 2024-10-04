@@ -1,0 +1,475 @@
+//colors
+$primary: #303F9F;
+$light-primary: #BBDEFB;
+$white: #f2f2f2;
+$divider: #B6B6B6;
+$error: #D32F2F;
+$borde: 2px;
+$font-family: "Roboto",Arial;
+
+
+.wrap-form{ //forma dimencion de cuadro para el formulario general
+            @include edContainer;
+            @include edItem(100);
+            max-width: 700px;
+            padding: 40px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0px 0px 3px grey;
+            .titulo{
+                color: $primary;
+            }
+            .columna1{
+                @include edContainer;
+                @include edItem(60);
+                /*background: red;*/
+            }
+            .columna2{
+                @include edContainer;
+                @include edItem(40);
+                /*background: blue;*/
+            }
+}
+.buttons-product{
+    @include edContainer;
+    @include edItem(100);
+    padding: 20px;
+}
+.colum50{
+    @include edItem(50);
+
+}
+.colum100{
+    @include edContainer;
+    @include edItem;
+}
+
+.marginselect{
+    margin-bottom: 20px;
+}
+
+.columTitle{
+    @include edContainer;
+    @include edItem(95);
+    label{
+        text-align: center;
+        width: 100%;
+        font: 600 20px "Open Sans";
+        color: #0072c6;
+        padding-bottom: 3vh;
+    }
+}
+.columIconClose{
+    @include edContainer;
+    @include edItem(5);
+    .fa-times-rectangle{
+        color: #3065A3;
+    }
+}
+.columBtn{
+    @include edContainer;
+    @include edItem;
+    padding-top: 20px;
+    .btnlateral{
+        @include edItem(40);
+    }
+}
+.infoReport{
+    @include edContainer;
+    @include edItem();
+    input[type="text"]{
+        font-family: $font-family;
+        font-size: 16px;
+        color: $primary;
+        width: 25%;
+        outline: none;
+        padding: 8px;// altura
+        background: none;
+        border: none;
+        border-bottom: $borde solid $light-primary;
+    }
+
+}
+//Styles for Porducts
+.windows-modal{ //contenido formulario
+                /*@include edContainer;*/
+                width: 100%;
+                color: $white;
+                padding: 50px;
+                .form-modal{
+                    @include edContainer;
+                    width: 100%;
+                    margin: auto;
+                    .input-group{
+                        position: relative;
+                        margin-bottom: 4px;
+                        /*background: rgba(#ccc, .2);*/
+                        input[type="text"],input[type="number"],input[type="password"],input[type="date"],input[type="select"]{
+                            font-family: $font-family;
+                            font-size: 16px;
+                            color: $primary;
+                            width: 100%;
+                            outline: none;
+                            padding: 8px;// altura
+                            background: none;
+                            border: none;
+                            border-bottom: $borde solid $light-primary;
+                            &:focus,&:active{
+                                outline: none;
+                                border-bottom: $borde solid $primary;
+                            }
+                            &.error{
+                                border-bottom: $borde solid $error;
+                                + label{
+                                    color: $error;
+                                }
+                            }
+
+                        }
+                        label{
+                            color: $primary;
+                            &.label{
+                                -webkit-transition: all .3s ease;
+                                -o-transition: all .3s ease;
+                                transition: all .3s ease;
+                                margin-left: 10px;
+                                font-size: 16px;
+                                line-height: 16px;
+                                position: absolute;
+                                top: 10px; //altura de descripcion
+                                left: 5;
+                                &.active{
+                                    top: -3px;
+                                    font-size: 12px;
+                                    line-height: 12px;
+                                    color: $divider;
+                                }
+                            }
+                        }
+                    }
+                }
+}
+
+
+//Style for FrmCPGestion Compras Publicas
+.imgLogo{
+    @include edContainer;
+    @include edItem();
+    text-align: center;
+    color: #3065A3;
+    padding-top: 3.5em;
+    .contenidoLogo1{
+        @include edContainer;
+        @include edItem(50);
+    }
+    .contenidoLogo{
+        @include edContainer;
+        @include edItem(50);
+
+    }
+}
+// first class for user CP
+body{
+    background: #ecf0f1;
+}
+.main-user{
+    @include edContainer;
+    &__optionArea{
+        @include edContainer;
+        @include edItem(100);
+        margin-top: 1em;
+        &__list{            
+            @include edItem(50);
+            @include  button($buttonColor,$contentFontColor);            
+            @include propertiesFont(#000,1em);
+            text-align: center;
+            line-height: 1.5em;
+
+        }
+        &__separador{            
+            @include edItem(20);
+        }
+        &__add{            
+            @include edItem(30);
+            @include button($buttonColor,$contentFontColor);            
+            @include propertiesFont(#000,1em);
+            text-align: center;
+            line-height: 1.5em;
+        }
+    }
+    &__option{
+        @include edItem(100);
+        @include crossEnd;
+        @include flexColumn;        
+        &__add{            
+            @include button($buttonColor,$contentFontColor);            
+            @include propertiesFont(#000,1em);
+            text-align: center;
+            line-height: 1.5em;
+        }
+
+        &__search{
+            background: $buttonColor;
+            padding: 0 1em;         
+            line-height:1.4em;
+            height: 1.6em;
+        }
+    }
+    
+    &__optionInfo{
+        @include edContainer;
+        @include edItem(100);
+        &__add{         
+            @include edContainer;
+            @include edItem(45);
+            @include button($buttonColor,$contentFontColor);            
+            @include propertiesFont(#000,1em);
+            text-align: center;
+            line-height: 1.5em;
+            margin: .5em;
+        }
+
+        &__search{
+            background: $buttonColor;
+            padding: 1 1em;         
+            line-height:1.4em;
+            height: 1.6em;
+        }
+    }
+    &__content{
+        @include edItem(100);
+        padding-bottom: 1em;        
+    }
+}
+//Windows Modal
+.windows-modal {
+    @include windowsModal();
+}
+
+#windows-delete-user:target{
+    opacity:1;
+    pointer-events:auto;
+}
+.delete:target{
+    opacity:1;
+    pointer-events:auto;
+}
+.hide-modal{    
+    display:none;
+}
+#main-modal{    
+    @include fromTo(s,l){
+        margin-top:$heightHeader; 
+    }
+}
+//User windows General
+.main-modal{
+    @include edContainer;
+    margin-top:8em;   
+    &__left{
+        @include edItem(5,21,25);
+    }
+    &__content{
+        @include edItem(80,58,50);
+        background: #FFF;
+        border:2px solid #3065A3;        
+        padding:$reset;
+        width: 100%;        
+        &__box{
+            @include edContainer;
+            @include propertiesFont($contentFontColor,1.1em);            
+            &__column-button{               
+                @include edItem(100,100,50);                 
+                @include fromTo(s,l){                       
+                    @include mainCenter;
+                }                  
+            }
+            //add user
+            &__column-add{               
+                @include edItem(100,50);
+                padding-top: .2em;
+                padding-bottom: .2em;   
+                @include fromTo(s,m){                       
+                    @include mainDistribute;
+                }                  
+            }
+            //update user
+            &__column-update-fields{
+                padding-left:1em ; 
+                @include edItem(65);
+            }
+            &__column-update-image{
+                @include edItem(35);
+                padding-left: $reset;
+            }
+            //delete
+            &__text-delete{
+                @include edItem(100);
+                @include mainCenter;
+                padding-bottom: 1em;
+                @include propertiesFont(#000,1.0em);
+            }            
+            &__title{                 
+                @include edItem(100); 
+                @include mainJustify;
+                padding: .1em ;
+                background: #3065A3;
+                &__border{
+                    padding-bottom: 0.5em;
+                    width: 100%;
+                    padding-right:  0.5em;
+                }
+            }
+        }
+    }    
+    &__right{        
+        @include edItem(5,21,25);
+    }
+}
+
+//Add User
+.text-addUser{
+    width: 100%;
+    @include propertiesButton;
+    @include fromTo(s,m){
+        width: 13em;
+    }
+}   
+.labelUser-add{
+    width: 100%;
+    @include fromTo(s,m){
+        @include mainDistribute;
+
+    }
+}
+.button-user{
+    @include button(#D8D8D8,black, radius);
+    line-height: 2em;
+}
+
+#button-save-add{
+    @include mainEnd;
+    @include positionButton;
+}
+#button-cancel-add{
+    @include mainStart;
+    @include positionButton;
+}
+//update user
+.text-updateUser,.text-userarea{
+    width: 70%;
+    @include propertiesButton;
+    @include fromTo(s,l){
+        width: 100%;
+    }
+}
+
+.selectList{
+    @include edContainer;
+    @include edItem()
+
+}
+.labelUser-update{
+    width: 30%;
+}
+
+.button-file-update{
+    @include button(#D8D8D8,black, radius);
+    line-height: 1.4em;
+    max-width: 100%;
+    text-align: center;
+    padding-left: 1em;
+}
+.image-update{     
+    @include toCenter(7.5em);
+    height:9em; 
+}
+#button-save-update{
+    @include mainEnd;
+    @include positionButton;
+}
+#button-cancel-update{
+    @include mainStart;
+    @include positionButton;
+}
+//delete user
+#close-delete{
+    @include mainEnd;
+    padding-bottom: $reset;
+}
+#button-delete{
+    @include mainEnd;
+    @include positionButton;
+}
+#button-cancel-delete{
+    @include mainStart;
+    @include positionButton;
+}
+
+#button-delete-area{
+    @include mainEnd;
+    @include positionButton;
+}
+#button-cancel-delete-area{
+    @include mainStart;
+    @include positionButton;
+}
+
+
+
+//others
+
+#buttonPhoto-add{
+    margin: $reset;
+}
+#closeIconModal{
+    color:$buttonColor;
+    padding-right: 1em;
+}
+#buttonPhoto{
+
+    @include fromTo(s,m){
+        width: 173.33px; 
+    }
+    @include fromTo(m,xl)
+    {
+        width: 212.33px;
+    }
+}
+
+#button-purchase, #button-returnpurchase, #button-cancel-visualize{
+    @include mainEnd; 
+    @include positionButton;
+}   
+
+
+//Windows Modal Update and Delete
+//Menu Style-----------------------------------------
+
+//-----------------------inventory---------------
+
+.principalInventory{
+    @include edContainer;
+    @include edItem;
+
+
+    .tblateral{
+        @include edContainer;
+        @include edItem(25);
+
+    }
+    .tbcentro{
+        @include edContainer;
+        @include edItem(50);
+        .centro-interno{
+            @include edContainer;
+            border: 1px blue solid;
+            background:	#ccccff;
+            padding: .5em;
+            @include edItem(50); 
+            @include propertiesFont($contentFontColor,1em);
+            @include mainCenter; 
+        }
+    }
+
+}

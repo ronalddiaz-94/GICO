@@ -1,0 +1,54 @@
+
+section#contenedor_general{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    -webkit-filter: blur(2px);
+    background-position: center -5px;
+}
+
+.contenedor{
+    @include edContainer;
+    @include edItem(100);
+    color:  #ecf0f1;
+    font-family: 'Raleway', sans-serif;
+    .titulo{
+        @include edContainer;
+        @include edItem(100);
+    }
+    .empresa{
+        font-size: 50px;
+    }
+    .eslogan{
+        @include edContainer;
+        @include edItem(100);
+        font-size: medium;
+    }
+    .cuerpo{
+        @include edContainer;
+        @include edItem(100);
+        height: 30vh;
+    }
+    .boton{
+        @include edContainer;
+        @include edItem(100);
+        color:  #ecf0f1;
+        .selector1 {
+            position: absolute;
+            left: 45%;
+            @include button(teal, #ecf0f1);
+        }
+    }
+
+
+}
+
+

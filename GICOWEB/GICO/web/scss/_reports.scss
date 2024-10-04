@@ -1,0 +1,55 @@
+.main-reports{
+    @include edItem(100);
+
+}
+.container-reports{
+    @include edContainer;
+    @include edItem(100,75);
+    margin: auto;
+
+}
+.columns-unity{
+    @include edItem(100);
+    @include edContainer;
+    @include propertiesFont($contentFontColor,1em);
+    padding-bottom:  2em;
+    margin-bottom: 3em;
+}
+.columns-reports{
+    @include edItem(33); 
+    @include propertiesFont($contentFontColor,1em);
+    @include mainCenter; 
+}
+.i{
+    @include edItem(100);
+    //padding-left: 1.3em; 
+}
+.container-select{
+    @include edItem(100,50,50); 
+    @include mainCenter;
+    height:1.8em;
+}
+.text{
+    text-align: center; 
+}
+.report{
+    color:#979797;
+}
+a:link   
+{   
+ text-decoration:none;   
+}
+.msgerror1
+{
+    color: red;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}
+.a_report{    
+    color:black;
+    :link {color:black};
+    :visited {color:black};
+    :active {color:black};
+    :hover {color:black};
+}

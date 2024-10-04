@@ -1,0 +1,24 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08-mar-2017, 10:41:57
+    Author     : Jorge
+*/
+
+$cssCore    : false; //Compila todo el css (no recomendado si se trabaja con sass).
+$cssHelpers : true; //Ayudas extras para el layout (para alinear elementos, limpiar los floats, controlar el padding, etc...) Se recomienda activarlo.
+$devMode    : false;
+@import "_ed-grid.scss";
+@import "_mixins.scss";
+@import "_global.scss";
+@import "_header.scss";
+@import "_menu.scss";
+@import "_footer.scss";
+@import "_reports.scss";
+@import "_styleGICO.scss"; 
+
+
+
