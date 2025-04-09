@@ -1,46 +1,46 @@
 # sistemaGICO
 
-**sistemaGICO** es la versión móvil del sistema GICO, diseñada como una aplicación Android nativa. Su propósito es brindar acceso desde dispositivos móviles a funciones esenciales del sistema de gestión de inventarios.
+**sistemaGICO** is the mobile version of the GICO system, designed as a native Android application. Its purpose is to provide access from mobile devices to essential functions of the inventory management system.
 
-## Características
+## Features
 
-- Consulta de información de productos.
-- Gestión de usuarios (roles, acceso).
-- Conexión los servicios web, API del sistema GICO WEB (GICO-AD).
-- Interfaz responsiva y adaptada a móviles.
+- Product information lookup.
+- User management (roles, access).
+- Connection to web services and the GICO WEB system API (GICO-AD).
+- Responsive and mobile-friendly interface.
 
-## Estructura del Proyecto
+## Project Structure
 
-- `app/`: Contiene el código fuente de la aplicación Android.
-- `.idea/`: Archivos de configuración del IDE (Android Studio).
-- `gradle/`, `gradlew`, `build.gradle`: Archivos de configuración y automatización de compilación con Gradle.
-- `settings.gradle`: Define los módulos del proyecto.
+- `app/`: Contains the source code of the Android application.
+- `.idea/`: IDE configuration files (Android Studio).
+- `gradle/`, `gradlew`, `build.gradle`: Configuration and build automation files using Gradle.
+- `settings.gradle`: Defines the project's modules.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **Java** 
-- **Android SDK**
-- **Gradle** como sistema de construcción
-- **Android Studio** como entorno de desarrollo
+- **Java**  
+- **Android SDK**  
+- **Gradle** as the build system  
+- **Android Studio** as the development environment
 
-## Cómo Ejecutar
+## How to Run
 
-1. Clona el repositorio:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/ronalddiaz-94/GICO.git
-2. Abre la carpeta sistemaMovilGICO/sistemaGICO en Android Studio.
-3. Sincroniza el proyecto con Gradle.
-4. Configura un emulador o conecta un dispositivo Android.
-5. Ejecuta la app desde Android Studio (Run > Run 'app').
+2. Open the sistemaMovilGICO/sistemaGICO folder in Android Studio.
+3. Sync the project with Gradle.
+4. Set up an emulator or connect an Android device.
+5. Run the app from Android Studio (Run > Run 'app').
 
 
-## Requisitos Previos
-	*Android Studio (recomendado)
-	*Java Development Kit (JDK) 8 o superior
-	*Android SDK configurado
-	*Conexión a la API del sistema GICO (servidor backend en línea o local)
+## Prerequisites
+	*Android Studio (recommended)
+	*Java Development Kit (JDK) 8 or higher
+	*Android SDK configured
+	*Connection to the GICO system API (online or local backend server)
 
-## Notas Adicionales
-	*Verifica la configuración de endpoints en el código (IP o dominio del backend).
-	*Para pruebas en red local, asegúrate de que el dispositivo tenga acceso al servidor.
+## Additional Notes
+	*Check the endpoint configuration in the code (IP or backend domain).
+	*For local network testing, ensure the device has access to the server.
