@@ -1,81 +1,81 @@
 # GICO-AD
 
-**GICO-AD** es el módulo administrativo del sistema GICO, desarrollado en Java y estructurado para ejecutarse como una aplicación web con soporte para JSP/Servlets. Esta sección se enfoca en la gestión de usuarios, proveedores, productos, ventas, clientes, notas de crédito, bodegas, proformas. Basado en servicios web tipo REST.
+**GICO-AD** is the administrative module of the GICO system, developed in Java and structured to run as a web application with JSP/Servlet support. This section focuses on managing users, suppliers, products, sales, clients, credit notes, warehouses, and quotes. It is based on RESTful web services.
 
-## Estructura de Carpetas
+## Folder Structure
 
-- `src/`: Contiene el código fuente Java (servlets, controladores, lógica de negocio).
-- `web/`: Archivos de presentación (recursos estáticos).
-- `librerias/`: Librerías externas requeridas para el despliegue.
-- `nbproject/`: Configuración del proyecto para el entorno NetBeans.
-- `build.xml`: Script de compilación.
-- `prepros-6.config`: Configuración de Prepros, herramienta para preprocesadores web.
+- `src/`: Contains the Java source code (servlets, controllers, business logic).
+- `web/`: Presentation files (static resources).
+- `librerias/`: External libraries required for deployment.
+- `nbproject/`: Project configuration for the NetBeans environment.
+- `build.xml`: Build script.
+- `prepros-6.config`: Configuration for Prepros, a tool for web preprocessors.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
 - **Java EE** (Servlets, JSP)
 - **JavaScript**
 - **NetBeans IDE**
-- **Payara Server** (servidor sugerido)
-- **Prepros** (para procesamiento de recursos estáticos)
+- **Payara Server** (recommended server)
+- **Prepros** (for processing static resources)
 
-##  Instrucciones de Despliegue
+## Deployment Instructions
 
-1. Clonar el repositorio:
+1. Clone the repository:
 
    ```bash
    git clone https://github.com/ronalddiaz-94/GICO.git
 
-2. Abrir el proyecto GICO-AD en NetBeans.
-3. Configurar el servidor Apache Tomcat en NetBeans.
-4. Verificar la conexión a base de datos en los archivos de configuración (si aplica).
-5. Ejecutar el proyecto desde NetBeans.
+2. Open the GICO-AD project in NetBeans.
+3. Configure the Apache Tomcat server in NetBeans.
+4. Verify the database connection in the configuration files (if applicable).
+5. Run the project from NetBeans.
 
 
 
 
 # GICO
 
-**GICO** es un módulo del sistema GICOWEB, desarrollado para facilitar la gestión de información de inventerios. Este componente se centra en la parte visual (frontend) del sistema y se comunica con GICO-AD para obtener la información.
+**GICO** is a module of the GICOWEB system, developed to facilitate inventory information management. This component focuses on the visual part (frontend) of the system and communicates with GICO-AD to retrieve information.
 
-## Estructura del Proyecto
+## Project Structure
 
-- `src/`: Contiene el código fuente principal del proyecto.
-- `web/`: Incluye los archivos relacionados con la interfaz de usuario y recursos web.
-- `librerias/`: Directorio destinado a las dependencias y bibliotecas externas necesarias para el funcionamiento del proyecto.
-- `nbproject/`: Archivos de configuración específicos para el entorno de desarrollo NetBeans.
-- `.gitignore`: Archivo que especifica qué archivos y directorios deben ser ignorados por Git.
-- `build.xml`: Script de construcción utilizado para automatizar tareas como la compilación y el despliegue.
-- `prepros-6.config`: Archivo de configuración para Prepros, una herramienta que compila preprocesadores como Sass o LESS.
+- `src/`: Contains the main source code of the project.
+- `web/`: Includes files related to the user interface and web resources.
+- `librerias/`: Directory for external dependencies and libraries required for the project to function.
+- `nbproject/`: Configuration files specific to the NetBeans development environment.
+- `.gitignore`: Specifies which files and directories should be ignored by Git.
+- `build.xml`: Build script used to automate tasks such as compilation and deployment.
+- `prepros-6.config`: Configuration file for Prepros, a tool that compiles preprocessors like Sass or LESS.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **Java**: Lenguaje de programación principal del proyecto.
-- **HTML/CSS/JavaScript**: Tecnologías usadas para la presentación visual de la información
-- **NetBeans**: Entorno de desarrollo integrado (IDE) utilizado para el desarrollo del proyecto.
-- **Payara Server**: Herramienta de automatización de compilación utilizada para gestionar tareas de construcción.
-- **Prepros**: Aplicación utilizada para compilar preprocesadores y optimizar recursos web.
+- **Java**: Main programming language of the project.
+- **HTML/CSS/JavaScript**: Technologies used for the visual presentation of information.
+- **NetBeans**: Integrated Development Environment (IDE) used for project development.
+- **Payara Server**: Application server used for building and deploying Java EE applications.
+- **Prepros**: Tool used to compile preprocessors and optimize web resources.
 
-## Instrucciones de Instalación
+## Installation Instructions
 
-1. **Clonar el repositorio**:
+1. **Clone the repository**:
 
    ```bash
    git clone https://github.com/ronalddiaz-94/GICO.git
-2. Importar el proyecto en NetBeans:
-	*Abrir NetBeans.
-	*Seleccionar File > Open Project.
-	*Navegar hasta el directorio GICOWEB/GICO y abrir el proyecto.
-3. Configurar las dependencias:
-	*Asegurarse de que todas las bibliotecas necesarias estén presentes en el directorio librerias/.
-	*Si alguna dependencia falta, añadirla manualmente al proyecto.
-4. Configurar el servidor:
-	*Asegurarse de que un servidor compatible esté configurado en NetBeans.
-	*Establecer el contexto del proyecto según sea necesario.
-5. Compilar y ejecutar:
-	*Ejecutar el proyecto dentro de NetBeans o desplegarlo manualmente en el servidor configurado.
+2. Import the project into NetBeans:
+	*Open NetBeans.
+	*Go to File > Open Project.
+	*Navigate to the GICOWEB/GICO directory and open the project.
+3. Configure dependencies:
+	*Make sure all necessary libraries are present in the librerias/ directory.
+	*If any dependency is missing, add it manually to the project.
+4. Configure the server:
+	*Ensure a compatible server is configured in NetBeans. 
+	*Set the project context as needed.
+5. Build and run:
+	*Run the project from within NetBeans or deploy it manually to the configured server.
 
 
 # SQL
 
-**SQL** es un módulo del sistema GICOWEB, el cual contiene backups de las sentencias SQL de la base de datos utilizada para la centralización de la información.
+**SQL** is a module of the GICOWEB system, which contains backups of the SQL statements used in the database for centralizing information.
