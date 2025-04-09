@@ -19,7 +19,7 @@
 - **Payara Server** (servidor sugerido)
 - **Prepros** (para procesamiento de recursos estáticos)
 
-## 🚀 Instrucciones de Despliegue
+##  Instrucciones de Despliegue
 
 1. Clonar el repositorio:
 
